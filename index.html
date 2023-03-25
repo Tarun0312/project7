@@ -1,0 +1,87 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+        .d1{
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+        .d1 h3,p{
+            text-align: center;
+        }
+        @media screen and (min-width:1441px) {
+            .d2{
+                display: block !important;
+                background-color: rgb(49, 134, 103);
+            }
+            .d1,.d4,.d5,.d6{
+                display: none;
+            }
+        }
+        @media screen and (min-width:1024px) and (max-width:1440px) {
+            .d3{
+                display: block;
+                background-color: green
+            }
+            .d2,.d4,.d5,.d6{
+                display: none;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .d4{
+                display: block;
+                background-color: brown;
+            }
+            .d2,.d3,.d5,.d6{
+                display: none;
+            }
+        }
+        @media screen and (min-width:425px) and (max-width:768px) {
+            .d5{
+                display: block;
+                background-color: rgb(29, 160, 204);
+            }
+            .d2,.d4,.d3,.d6{
+                display: none;
+            }
+        }
+        @media screen and (max-width:425px) {
+            .d6{
+                display: block;
+                background-color: red;
+            }
+            .d2,.d4,.d5,.d3{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d1 d2">
+            <h3>This is a media query demo page</h3>
+        </div>
+        <div class="d1 d3">
+            <h3>This is a media query demo page</h3>
+            <p>Screen Size:1440px</p>
+        </div>
+        <div class="d1 d4">
+            <h3>This is a media query demo page</h3>
+            <p>Screen Size:1024px</p>
+        </div>
+        <div class="d1 d5">
+            <h3>This is a media query demo page</h3>
+            <p>Screen Size:768px</p>
+        </div>
+        <div class="d1 d6">
+            <h3>This is a media query demo page</h3>
+            <p>Screen Size:425px</p>
+        </div>
+    </div>
+</body>
+</html>
